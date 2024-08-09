@@ -27,8 +27,8 @@ jobs:
       - name: Install dependencies
         run: yarn install
 
-      - name: Linting
-        run: yarn lint
+      - name: type-chek
+        run: yarn type-chek
 
       - name: Test
         run: yarn test
