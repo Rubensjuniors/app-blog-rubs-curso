@@ -27,6 +27,9 @@ jobs:
       - name: Install dependencies
         run: yarn install
 
+      - name: upgrade dependencies
+        run: yarn upgrade
+
       - name: type-check
         run: yarn type-check
 
