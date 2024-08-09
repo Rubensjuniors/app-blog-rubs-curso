@@ -2,11 +2,25 @@
   "name": "my-blog",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
-    "dev": "next dev",
+    "start-local": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "type-check": "tsc --project tsconfig.json --noEmit",
+    "lint": "eslint src --max-warnings=0",
+    "prettier:check": "prettier --check .",
+    "test": "jest",
+    "test:watch": "yarn test --watch",
+    "test:coverage": "yarn test --coverage --detectOpenHandles",
+    "test:coverage:text": "yarn test --coverageReporters='text-summary'",
+    "quality-check": "yarn run lint && yarn run type-check && yarn run prettier:check"
+  },
+  "husky": {
+    "hooks": {
+      "pre-push": "yarn run quality-check && yarn run test",
+      "post-merge": "npm install"
+    }
   },
   "dependencies": {
     "next": "14.2.5",
@@ -24,6 +38,7 @@
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-react": "^7.35.0",
     "eslint-plugin-react-hooks": "^4.6.2",
+    "husky": "^9.1.4",
     "postcss": "^8",
     "prettier": "^3.3.3",
     "tailwindcss": "^3.4.1",

@@ -1,0 +1,11 @@
+node_modules
+yarn.lock
+package-lock.json
+doc
+public
+dist
+config
+*.md
+*.yaml
+coverage
+.github/workflows
