@@ -10,5 +10,6 @@
   "trailingComma": "none",
   "quoteProps": "as-needed",
   "jsxSingleQuote": false,
-  "bracketSpacing": true
+  "bracketSpacing": true,
+  "plugins": ["prettier-plugin-tailwindcss"]
 }

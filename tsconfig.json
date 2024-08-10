@@ -22,6 +22,6 @@
       "contentlayer/generated": ["./.contentlayer/generated"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "jest.config.mjs", "next.config.mjs"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "jest.config.mjs", "next.config.mjs", "./.contentlayer/generated"],
   "exclude": ["node_modules"]
 }
